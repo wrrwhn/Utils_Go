@@ -19,9 +19,9 @@ var (
 	// DefaultType 其它类型
 	DefaultType = TypeFormat("%v")
 	// ImageType 图片类型
-	ImageType = TypeFormat("![%v][%v]")
+	ImageType = TypeFormat("![%v](%v)")
 	// DocType 文档类型
-	DocType = TypeFormat("[%v][%v]")
+	DocType = TypeFormat("[%v](%v)")
 )
 
 // ModeFormat 文件类型

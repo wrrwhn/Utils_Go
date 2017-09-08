@@ -22,6 +22,7 @@ var sk string
 var domain string
 var bucket string
 var path string
+var level int
 
 func init() {
 
@@ -39,6 +40,8 @@ func init() {
 	if len(path) == 0 {
 		path = utils.GetCurrentPath()
 	}
+	flag.IntVar(&level, "level", 1, "path level")
+
 	flag.Parse()
 }
 

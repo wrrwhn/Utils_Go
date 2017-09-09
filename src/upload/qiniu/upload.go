@@ -170,8 +170,13 @@ func filterDic(path string, files *[]string, filenames *[]string, formats *[]str
 		log.Panic("filterDic.path is blank")
 	}
 
+	split := "\\"
+	curLevel := strings.Count(path, split)
 	_ = filepath.Walk(path, func(p string, file os.FileInfo, err error) error {
 		if nil == file {
+			return nil
+		}
+		if strings.Count(p, split) > curLevel+level {
 			return nil
 		}
 

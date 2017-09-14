@@ -17,7 +17,7 @@ type TypeFormat string
 
 var (
 	// DefaultType 其它类型
-	DefaultType = TypeFormat("%v")
+	DefaultType = TypeFormat("[%v](%v)")
 	// ImageType 图片类型
 	ImageType = TypeFormat("![%v](%v)")
 	// DocType 文档类型

@@ -105,7 +105,7 @@ func changeFile(path, tail string) {
 	cmd := fmt.Sprintf("copy /Y %s /B +%s /B %s", path, tail, path)
 	log.Printf("cmd.run(%v)", cmd)
 	// 注：一定要将每个参数分开！！
-	c := exec.Command("cmd", " /C ", "copy", "/Y", path, "/B", "+", tail, "/B", path)
+	c := exec.Command("cmd", "/C ", "copy", "/Y", path, "/B", "+", tail, "/B", path)
 	c.Stderr = &stderr
 	if err := c.Run(); err != nil {
 		log.Fatalf("%s: %s", err, stderr.String())

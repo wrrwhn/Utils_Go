@@ -1,6 +1,13 @@
 [TOC]
 
 ## 目录说明
+### jwt
+- 描述
+    - 生成 jwt token
+    - 校验 jwt token
+        - 通用参数校验，主要包括 nbf 和 exp
+        - 自定义参数校验
+
 ### md5
 - 描述
     - md5.exe -h

@@ -75,7 +75,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	l := r.URL.Query().Get("login")
 	if "true" == l {
 		rootObject["login"] = true
-	}else{
+	} else {
 		rootObject["login"] = false
 	}
 

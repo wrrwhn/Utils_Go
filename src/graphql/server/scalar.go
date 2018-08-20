@@ -35,12 +35,11 @@ func Scalar() {
 							},
 						}
 
-						ap := fmt.Sprintf("%v", p.Args["productor"])
-						if 0 != len(ap) {
+						ap, ok := p.Args["productor"].(*ScalarProductor)
+						if ok {
 							tmpProducts := []ScalarProduct{}
 							for _, y := range products {
-								// fmt.Println(ap, "\t", y.Productor.Name)
-								if ap == y.Productor.Name {
+								if ap.Name == y.Productor.Name {
 									tmpProducts = append(tmpProducts, y)
 								}
 							}

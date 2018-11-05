@@ -65,3 +65,17 @@ go run upload.go -path=C:\Users\Yao\Desktop\76aaa869ly1fi6n1duxn5j21dw0kak5a.jpg
 [新建 Microsoft PowerPoint 演示文稿.pptx][http://otzm88f21.bkt.clouddn.com/19118280-cacb-43f3-98b6-32600ef459b9.pptx]
 uplaod.exe%!(EXTRA string=http://otzm88f21.bkt.clouddn.com/a932af7f-837a-4df6-92dd-e80b29c25ab6.exe)
 ```
+
+
+## 发布
+- 配置环境
+
+    ```
+    $env:GOPATH = "D:\server\go\lib;D:\work\git\yao\go\Utils_Go";
+    ```
+    
+- 目录跳转
+    - `cd D:\work\git\yao\go\Utils_Go\src\upload\qiniu`
+
+- 发布
+    - `go build -o upload.exe`

@@ -34,8 +34,14 @@ func init() {
 	if len(sk) == 0 {
 		flag.StringVar(&sk, "sk", "", "secret key")
 	}
-	flag.StringVar(&domain, "domain", "http://otzm88f21.bkt.clouddn.com", "domain")
-	flag.StringVar(&bucket, "bucket", "document", "bucket")
+	domain = os.Getenv("QINIU_DOMAIN")
+	if len(domain) == 0 {
+		flag.StringVar(&domain, "domain", "", "domain")
+	}
+	bucket = os.Getenv("QINIU_BUCKET")
+	if len(bucket) == 0 {
+		flag.StringVar(&bucket, "bucket", "", "bucket")
+	}
 	flag.StringVar(&path, "path", "", "path")
 	if len(path) == 0 {
 		path = utils.GetCurrentPath()
